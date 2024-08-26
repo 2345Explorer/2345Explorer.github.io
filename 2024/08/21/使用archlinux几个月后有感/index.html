@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">使用 Arch Linux 几个月有感 | 为什么我选择 Arch Linux ，Arch 的优缺点有什么 | 一些Linux发行版推荐 | IcyLightDream&#39;s Blog</title>
+  
+    <link rel="shortcut icon" href="/img/custom/favicon.png">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "IcyLightDream's Blog";
+  mashiro_option.author_name = "IcyLightDream's Blog";
+  mashiro_option.site_url = "https://IcyLightDream.github.io";
+  mashiro_option.v_appId = "";
+  mashiro_option.v_appKey = "";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+  // mashiro_option.jsdelivr_css_src = "https://jsd.onmicrosoft.cn/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://macesuted.moe/wp-json/sakura/v1/image/feature,https://s1.ax1x.com/2018/03/09/9RBOTs.gif,https://i.loli.net/2019/08/20/tQoa6s9G5mDINLv.png,/img/custom/63833118_p0.png,/img/custom/97031744_p0.png,/img/custom/95518122_p0.jpg,/img/custom/58825498_p0.jpg,/img/custom/99118291_p0.png,https://www.cbjq.com/uploadfile/2023/0609/20230609024128915.jpg,https://www.cbjq.com/uploadfile/2023/0531/20230531023043542.jpg,https://www.cbjq.com/uploadfile/2023/1106/20231106083123603.jpg,https://www.cbjq.com/uploadfile/2024/0125/20240125074100335.jpg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="IcyLightDream's Blog" type="application/atom+xml">
+</head>
+
+<script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/piao.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/sakura.js"></script>
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+	<div id="banner_wave_1"></div>
+	<div id="banner_wave_2"></div>
+	<figure id="centerbg" class="centerbg">
+	  <div class="focusinfo no-select">
+		<div class="header-tou">
+		  <a href="https://IcyLightDream.github.io">
+			<img src="/img/custom/avatar.png">
+		  </a>
+		</div>
+		<div class="header-info">
+		  <p>Live your life with passion! With some drive!</p>
+		  <div class="top-social_v2">
+			<li id="bg-pre">
+			  <img class="flipx" src="https://jsd.onmicrosoft.cn/gh/honjun/cdn@1.6/img/other/next-b.svg">
+			</li>
+			
+			  
+				
+				  <li>
+					<a href="http://github.com/IcyLightDream" target="_blank" class="social-github" title="Github">
+					  <img src="/img/social/github.png">
+					</a>
+				  </li>
+				
+			  
+				
+				  <li>
+					<a href="https://gitee.com/IcyLightDream" target="_blank" class="social-github" title="Gitee">
+					  <img src="/img/social/gitee.png">
+					</a>
+				  </li>
+				
+			  
+				
+				  <li>
+					<a href="https://music.163.com/#/user/home?id=1944909911" target="_blank" class="social-github" title="网易云">
+					  <img src="/img/social/wangyiyun.png">
+					</a>
+				  </li>
+				
+			  
+				
+				  <li>
+					<a href="mailto:3553719228@qq.com" target="_blank" class="social-github" title="Email">
+					  <img src="/img/social/email.svg">
+					</a>
+				  </li>
+				
+			  
+				
+				  <li>
+					<a href="https://www.luogu.com.cn/user/243534" target="_blank" class="social-github" title="洛谷">
+					  <img src="https://cdn.luogu.com.cn/fe/logo-single.png?0a231b572e3eb12887faedad7d00e829">
+					</a>
+				  </li>
+				
+			  
+			
+			<li id="bg-next">
+			  <img src="https://jsd.onmicrosoft.cn/gh/honjun/cdn@1.6/img/other/next-b.svg">
+			</li>
+		  </div>
+		</div>
+	  </div>
+	</figure>
+	<div id="video-container" style="">
+	  <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+	  </video>
+	  <div id="video-btn" class="loadvideo videolive">
+	  </div>
+	  <div id="video-add">
+	  </div>
+	  <div class="video-stu">
+	  </div>
+	</div>
+	<div class="headertop-down faa-float animated" onclick="headertop_down()">
+	  <span>
+		<i class="fa fa-chevron-down" aria-hidden="true">
+		</i>
+	  </span>
+	</div>
+  </div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono"></span>
+            <span class="shironeko">IcyLightDream&#39;s Blog</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/categories">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-bookmark" aria-hidden="true"></i>
+                    分类
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/tags">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-tags" aria-hidden="true"></i>
+                    标签
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <img class="pattern-attachment-img lazyload" style="background-image: url(/img/使用archlinux几个月后有感/fea835ca8b7248c69c9f3ec0e0ad6614.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="/img/使用archlinux几个月后有感/fea835ca8b7248c69c9f3ec0e0ad6614.png">
+    </img>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      使用 Arch Linux 几个月有感 | 为什么我选择 Arch Linux ，Arch 的优缺点有什么 | 一些Linux发行版推荐</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="/img/custom/avatar.png">
+          </a>
+        </span>
+        <span>
+          <a href=""></a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2024-8-21
+        <!-- <span class="bull">·</span> -->
+        <!-- <span id="busuanzi_value_page_pv"></span>次阅读 -->
+      </p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p><img src="/img/%E4%BD%BF%E7%94%A8archlinux%E5%87%A0%E4%B8%AA%E6%9C%88%E5%90%8E%E6%9C%89%E6%84%9F/fea835ca8b7248c69c9f3ec0e0ad6614.png"><br>（终端是 Yakuake ，KDE 自带）</p>
+<h1 id="一点碎碎念，可以跳过不看"><a href="#一点碎碎念，可以跳过不看" class="headerlink" title="一点碎碎念，可以跳过不看"></a>一点碎碎念，可以跳过不看</h1><p>几年前从 CentOS 接触的 Linux ，<del>试图搭建一个KMS服务器 但是失败了</del> ，后来装过 Ubuntu Debian deepin Kali Kubuntu Manjaro，踩一路坑最后看评价不错选择了 Arch<br>习惯了图形界面安装，Arch 安装环境进去就一命令行，<del>吓得我立马打开了百度搜索怎么安装</del>，瞎折腾炸了好几次总算是稳定下来了<br>（不过其实 Windows 用的更多</p>
+<p>（更新：完了才发现我一直叫的ArchLinux是错的 好多地方都得改）</p>
+<blockquote>
+<p>应该用下面术语指代 Arch：<br>Arch Linux<br>Arch （省略 Linux）<br>archlinux （UNIX 名）<br>Archlinux、ArchLinux、archLinux、aRcHlInUx 等称呼都是不标准的。 （<a target="_blank" rel="noopener" href="https://wiki.archlinuxcn.org/wiki/Arch_%E6%9C%AF%E8%AF%AD#Arch_Linux">ArchWiki</a>）</p>
+</blockquote>
+<p>好了好了不扯了进入正题</p>
+<h1 id="Arch-Linux-优缺点"><a href="#Arch-Linux-优缺点" class="headerlink" title="Arch Linux 优缺点"></a>Arch Linux 优缺点</h1><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://wiki.archlinuxcn.org/wiki/%E9%A6%96%E9%A1%B5">精通31国语言的ArchWiki</a>（划，还是很详细的，一般的问题 Wiki 基本也都能解决</p>
+</li>
+<li><p>体积小</p>
+</li>
+</ul>
+<blockquote>
+<p>Arch Linux 被设计为可以运行在配置为最低 512 MiB 内存的 x86_64 架构的计算机上，但如果是从安装介质启动系统并成功安装在计算机硬盘中，则可能需要更多的内存。基本安装方式将占用小于 2 GiB 的硬盘存储空间。由于安装过程中需要从远程存储库获取软件包，计算机将需要一个有效的互联网连接。（<a target="_blank" rel="noopener" href="https://wiki.archlinuxcn.org/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97">ArchWiki</a>）</p>
+</blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://aur.archlinux.org/">Arch 用户软件仓库(AUR)</a> 软件包是用户上传的，下载源代码编译打包安装<del>一条龙服务</del>，比 Ubuntu 的 Personal Package Archives 方便很多，更新也是一条命令连带下面更新系统（<code>yay -Syyu</code> <code>paru -Syyu</code>等，根据安装的 AUR 助手而定）<br>  <img src="/img/%E4%BD%BF%E7%94%A8archlinux%E5%87%A0%E4%B8%AA%E6%9C%88%E5%90%8E%E6%9C%89%E6%84%9F/13600b340d6a4b739882a7a68f28b1db.png"></li>
+<li>滚动更新 更新速度快 没有类似 Ubuntu 的 LTS 版本，更新系统只需要 <code>sudo pacman -Syyu</code>  （而且 apt 一个<code>update</code>一个<code>upgrade</code>这一句就解决了）<img src="/img/%E4%BD%BF%E7%94%A8archlinux%E5%87%A0%E4%B8%AA%E6%9C%88%E5%90%8E%E6%9C%89%E6%84%9F/7131db3017df4b54895feb6de9dc11d4.png"></li>
+<li>强大的 <del>吃豆人</del> pacman 包管理器 例：删除缓存 <code>sudo pacman -Sc</code> 删除不需要的依赖 <code>pacman -Qtdq | sudo pacman -Rs -</code> </li>
+<li>个性化定制，安装的包全部由用户决定（包括 Linux 内核）</li>
+<li>系统坏了进入安装环境（archiso）可以直接 <code>arch-chroot</code> 进主机操作（但是也只有命令行</li>
+</ul>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ul>
+<li>只支持 x86_64 架构（arm 架构移植自社区项目）</li>
+<li>对小白很不友好，建议还是从 Ubuntu 这种更简单的入手</li>
+<li>安装麻烦，只有命令行，第一次装可能要摸索很久 （给自己的教程引个流： <a target="_blank" rel="noopener" href="https://blog.csdn.net/orangebench11/article/details/139381701">安装 Arch Linux 和 KDE Plasma 6 &amp; 配置 fcitx5-rime 输入法 | 美化 | 双系统&#x2F;虚拟机（2024.6.1）</a> ，不过 Arch 的衍生发行版 Manjaro 有 GUI 安装，缺点就是更新慢（我就是因为用不了 Plasma 6 从 Manjaro 过来的，不过现在 Manjaro 好像也有了）</li>
+<li>滚动更新，太久不更新<strong>有可能</strong>会炸</li>
+</ul>
+<blockquote>
+<p>建议日常进行系统完整更新，这样既能享受到最新的问题修复和安全更新，还可以避免一次更新太多的软件包，手动处理是分批进行的。从社区寻求帮助时，其他人会假定系统进行了完整更新。<br>手头上保留 Arch 安装盘或其它 Linux “Live” 环境，这样有问题时可以进行修正。如果在生产环境使用 Arch，无法接受任何的停机，那么在更新前请在非关键系统上测试新配置文件和软件包，没有问题的时候再部署到生产环境。（<a target="_blank" rel="noopener" href="https://wiki.archlinuxcn.org/wiki/%E7%B3%BB%E7%BB%9F%E7%BB%B4%E6%8A%A4#%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F">ArchWiki</a>）</p>
+</blockquote>
+<ul>
+<li>没有那么的稳定，追求稳定可以尝试用 Manjaro ，但是 Manjaro 更新慢</li>
+<li>Arch Linux 的软件仓库相对 Debian 较小，不能<strong>直接</strong>安装 deb rpm 软件包，没有的一般可以去 AUR 看看，或者去 <a target="_blank" rel="noopener" href="https://flathub.org/">Flathub</a> 和 <a target="_blank" rel="noopener" href="https://snapcraft.io/store">Snap Store</a> （建议 AUR 优先，AUR 没有去 Flathub）</li>
+</ul>
+<h1 id="发行版推荐（不全面，只有自己用过的一些）"><a href="#发行版推荐（不全面，只有自己用过的一些）" class="headerlink" title="发行版推荐（不全面，只有自己用过的一些）"></a>发行版推荐（不全面，只有自己用过的一些）</h1><p>两个问题：</p>
+<h2 id="1-是否刚接触-Linux-不久"><a href="#1-是否刚接触-Linux-不久" class="headerlink" title="1. 是否刚接触 Linux 不久"></a>1. 是否刚接触 Linux 不久</h2><h2 id="2-下面几个桌面环境喜欢哪个（第一张是官方的图，第二张是美化后的图，出处在下面）"><a href="#2-下面几个桌面环境喜欢哪个（第一张是官方的图，第二张是美化后的图，出处在下面）" class="headerlink" title="2. 下面几个桌面环境喜欢哪个（第一张是官方的图，第二张是美化后的图，出处在下面）"></a>2. 下面几个桌面环境喜欢哪个（第一张是官方的图，第二张是美化后的图，出处在下面）</h2><h3 id="Gnome"><a href="#Gnome" class="headerlink" title="Gnome"></a>Gnome</h3><p><img src="/img/%E4%BD%BF%E7%94%A8archlinux%E5%87%A0%E4%B8%AA%E6%9C%88%E5%90%8E%E6%9C%89%E6%84%9F/format,png.png"><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/689399055"><img src="/img/%E4%BD%BF%E7%94%A8archlinux%E5%87%A0%E4%B8%AA%E6%9C%88%E5%90%8E%E6%9C%89%E6%84%9F/format,png-17245985290641.png"></a><br>（来自<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/689399055">https://zhuanlan.zhihu.com/p/689399055</a>）</p>
+<h3 id="KDE"><a href="#KDE" class="headerlink" title="KDE"></a>KDE</h3><p><img src="/img/%E4%BD%BF%E7%94%A8archlinux%E5%87%A0%E4%B8%AA%E6%9C%88%E5%90%8E%E6%9C%89%E6%84%9F/a6bf9e68b434587ff27bd8900490dc4e.png"><br><img src="/img/%E4%BD%BF%E7%94%A8archlinux%E5%87%A0%E4%B8%AA%E6%9C%88%E5%90%8E%E6%9C%89%E6%84%9F/71918cb96801441f9ded7656ed29cd49.png"><br>（这张图是我自己截的QWQ 下面回收站左边那个空白是截图工具 不知道为啥截的时候没了）</p>
+<h3 id="Xfce"><a href="#Xfce" class="headerlink" title="Xfce"></a>Xfce</h3><p><img src="/img/%E4%BD%BF%E7%94%A8archlinux%E5%87%A0%E4%B8%AA%E6%9C%88%E5%90%8E%E6%9C%89%E6%84%9F/9beff4d483e58d3d2c30247e5070afde.png"><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/79662586"><img src="/img/%E4%BD%BF%E7%94%A8archlinux%E5%87%A0%E4%B8%AA%E6%9C%88%E5%90%8E%E6%9C%89%E6%84%9F/format,png-17245985290642.png"></a><br>（来自<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/79662586">https://zhuanlan.zhihu.com/p/79662586</a>）</p>
+<h3 id="DDE"><a href="#DDE" class="headerlink" title="DDE"></a>DDE</h3><p><img src="/img/%E4%BD%BF%E7%94%A8archlinux%E5%87%A0%E4%B8%AA%E6%9C%88%E5%90%8E%E6%9C%89%E6%84%9F/9fd26897915b4a4989c253d53de55909.png"><br>（阿巴阿巴官网没找到图这是从宣传片里截的）<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1WS42197VF">https://www.bilibili.com/video/BV1WS42197VF</a></p>
+<h2 id="1-是"><a href="#1-是" class="headerlink" title="1. 是"></a>1. 是</h2><p>建议 Ubuntu 系</p>
+<h3 id="2-Gnome：Ubuntu"><a href="#2-Gnome：Ubuntu" class="headerlink" title="2. Gnome：Ubuntu"></a>2. Gnome：<a target="_blank" rel="noopener" href="https://cn.ubuntu.com/">Ubuntu</a></h3><h3 id="2-KDE-Kubuntu"><a href="#2-KDE-Kubuntu" class="headerlink" title="2. KDE: Kubuntu"></a>2. KDE: <a target="_blank" rel="noopener" href="https://kubuntu.org/">Kubuntu</a></h3><h3 id="2-Xfce：Xubuntu"><a href="#2-Xfce：Xubuntu" class="headerlink" title="2. Xfce：Xubuntu"></a>2. Xfce：<a target="_blank" rel="noopener" href="https://xubuntu.org/">Xubuntu</a></h3><h3 id="2-DDE：deepin"><a href="#2-DDE：deepin" class="headerlink" title="2. DDE：deepin"></a>2. DDE：<a target="_blank" rel="noopener" href="https://www.deepin.org/index/zh">deepin</a></h3><h2 id="1-否"><a href="#1-否" class="headerlink" title="1.否"></a>1.否</h2><p>个人不是很推荐 <a target="_blank" rel="noopener" href="https://www.debian.org/">Debian</a> ，相较于 <a target="_blank" rel="noopener" href="https://cn.ubuntu.com/">Ubuntu</a> 好像有一部分东西没有<br>如果想且有时间去折腾系统可以选择 <a target="_blank" rel="noopener" href="https://archlinux.org/">Arch</a> 和 <a target="_blank" rel="noopener" href="https://manjaro.org/">Manjaro</a>，Manjaro 更稳定，比 Arch 需要的时间少，但是软件包更新慢</p>
+<p>如果系统安装时没有想要的桌面环境可以在安装完成后用包管理器安装<br>Gnome：gnome 包 &amp; gdm 包（登录管理器）<br>KDE: plasma 包（完整）或 plasma-desktop 包（只有桌面环境） &amp; sddm 包（登录管理器）<br>Xfce：xfce4 包<br>DDE：建议下载 <a target="_blank" rel="noopener" href="https://www.deepin.org/index/zh">deepin</a><br>（不同发行版桌面环境包名可能不一样，找不到的话去百度看看）</p>
+<hr>
+<p>参考：<br><a target="_blank" rel="noopener" href="https://zh.moegirl.org.cn/Arch_Linux%E5%A8%98">Arch Linux 娘 - 萌娘百科 万物皆可萌的百科全书</a><br><a target="_blank" rel="noopener" href="https://zh.moegirl.org.cn/Manjaro%E5%A8%98">Manjaro娘 - 萌娘百科 万物皆可萌的百科全书</a><br><a target="_blank" rel="noopener" href="https://wiki.archlinuxcn.org/wiki/%E9%A6%96%E9%A1%B5">Arch Linux 中文维基</a></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2024/08/21/Install-MinGW-w64-on-Windows/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="/img/Install-MinGW-w64-on-Windows/cover.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="/img/Install-MinGW-w64-on-Windows/cover.png">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                在 Windows 中安装 MinGW-w64</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2024/06/07/Archlinux-Plasma6%E5%AE%89%E8%A3%85nvidia%E9%A9%B1%E5%8A%A8/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="/img/Archlinux-Plasma6安装nvidia驱动/cover.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="/img/Archlinux-Plasma6安装nvidia驱动/cover.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                【氵】Arch Linux+KDE Plasma 6+Wayland 安装nvidia驱动 / 开启HDR</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+
+
+
+
+
+
+
+
+	<script src="https://giscus.app/client.js"
+		data-repo="IcyLightDream/icylightdream.github.io"
+		data-repo-id="R_kgDOHTafbA"
+		data-category="Announcements"
+		data-category-id="DIC_kwDOHTafbM4CUBZL"
+		data-mapping="url"
+		data-strict="0"
+		data-reactions-enabled="1"
+		data-emit-metadata="0"
+		data-input-position="top"
+		data-theme="preferred_color_scheme"
+		data-lang="zh-CN"
+		data-loading="lazy"
+		crossorigin="anonymous"
+		async>
+	</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="/img/custom/avatar.png" itemprop="image" alt="" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author"></a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2024 IcyLightDream<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://jsd.onmicrosoft.cn/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://jsd.onmicrosoft.cn/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2024 IcyLightDream</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Github Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://jsd.onmicrosoft.cn/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="/img/custom/avatar.png">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">IcyLightDream's Blog</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/IcyLightDream" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=3553719228&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/categories">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-bookmark" aria-hidden="true"></i>
+            分类
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/tags">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-tags" aria-hidden="true"></i>
+            标签
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/aplayer/dist/APlayer.min.css">
+<script src="https://jsd.onmicrosoft.cn/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://jsd.onmicrosoft.cn/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2660651585"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>
